@@ -1,0 +1,37 @@
+{
+  "name": "demo-simple-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harmoniemand/demo-simple-webapp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harmoniemand/demo-simple-webapp/issues"
+  },
+  "homepage": "https://github.com/harmoniemand/demo-simple-webapp#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "node-json-db": "^0.7.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^0.4.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch":"^1.0.0",
+    "grunt-manifest": "^0.4.4",
+    "grunt-processhtml": "^0.4.1",
+    "grunt-replace": "^1.0.1"
+  }
+}
