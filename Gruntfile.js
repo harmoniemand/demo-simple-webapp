@@ -34,12 +34,22 @@ module.exports = function (grunt) {
 
             CSS: {
                 src: [
+                    "node_modules/angular-material/angular-material.css",
                     "./app/css/**/*.*"
                 ],
                 dest: "dist/app.css"
             },
             JS: {
                 src:  [
+                    "node_modules/angular/angular.js",
+                    "node_modules/angular-sanitize/angular-sanitize.js",
+                    "node_modules/angular-ui-router/release/angular-ui-router.js",
+                    "node_modules/oclazyload/dist/ocLazyLoad.js",
+                    "node_modules/angular-resource/angular-resource.js",
+                    "node_modules/angular-animate/angular-animate.js",
+                    "node_modules/angular-aria/angular-aria.js",
+                    "node_modules/angular-messages/angular-messages.js",
+                    "node_modules/angular-material/angular-material.js",
                     "./app/**/*.js"
                 ],
                 dest: "dist/app.js"
@@ -74,10 +84,6 @@ module.exports = function (grunt) {
                       {
                           match: 'random',
                           replacement: (new Date()).getYear() + (new Date()).getMonth() + (new Date()).getDay() + "-" + (new Date()).getHours() + (new Date()).getMinutes() + (new Date()).getSeconds() + (new Date()).getMilliseconds()
-                      },
-                      {
-                          match: 'version',
-                          replace: (new Date()).toUTCString()
                       }
                     ]
                 },
