@@ -76800,6 +76800,69 @@ angular.module('demo', ['ui.router', 'oc.lazyLoad', 'ngSanitize', 'ngMaterial', 
 
 
 angular.module('demo')
+    .directive('field', function () {
+    'use strict';
+
+    return {
+        restrict: 'E',
+        templateUrl: "/partials/field.html",
+        scope: {
+            model: "="
+        },
+        link: function (scope, elem, attrs) {
+            scope.label = attrs.label;
+            scope.type = attrs.type.toLowerCase();
+        }
+    };
+});
+
+
+
+
+angular.module('demo')
+    .directive('form', function () {
+    'use strict';
+
+    return {
+        restrict: 'E',
+        templateUrl: "/partials/form.html",
+        link: function (scope, elem, attrs) {
+            
+            var data = {
+                text: "foobar",
+                number: "2",
+                date: new Date()
+            };
+
+            scope.data = data;            
+        }
+    };
+});
+
+
+
+
+angular.module('demo')
+    .directive('navigation', function () {
+    'use strict';
+
+    return {
+        restrict: 'E',
+        templateUrl: "/partials/navigation.html",
+        link: function (scope, elem, attrs) {
+            console.log("running link of navigation-directive");
+
+            scope.go = function (name) {
+                scope.$root.route = name;
+            };
+        }
+    };
+});
+
+
+
+
+angular.module('demo')
     .directive('sample', function () {
     'use strict';
 

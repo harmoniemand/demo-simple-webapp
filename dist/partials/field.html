@@ -1,0 +1,14 @@
+<md-input-container class="md-block" ng-if="type == 'text'">
+    <label>{{label}}</label>
+    <input ng-model="model">
+</md-input-container>
+
+<md-input-container class="md-block" ng-if="type == 'number'">
+    <label>{{label}}</label>
+    <input ng-model="model" type="number">
+</md-input-container>
+
+<md-input-container ng-if="type == 'date'">
+    <label>{{label}}</label>
+    <md-datepicker ng-model="model"></md-datepicker>
+</md-input-container>

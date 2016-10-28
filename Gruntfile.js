@@ -61,7 +61,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'app',
-                        src: ['index.html', 'cache.manifest'],
+                        src: ['index.html', 'cache.manifest', 'partials/**/*.*'],
                         dest: 'dist/'
                     }
                 ]
